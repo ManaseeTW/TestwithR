@@ -1,0 +1,5 @@
+```{r}
+library(tidyverse)
+require(dplyr)
+speciesdat2 <- read_csv("/Users/Manasee/OneDrive/Documents/Phylocom/redo/completedataR.csv",) %>% transmute(Species = gsub(" ", "_", Species), DBH =  DBH, Colony = Colony, Foraged = Foraged, Distance = Distance, Succession = Succession, Family = Family) %>% dplyr::distinct()
+```
